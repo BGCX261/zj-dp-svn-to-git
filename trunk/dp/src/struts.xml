@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	<package name="default" namespace="/" extends="struts-default">
+		<action name="login" method="login" class="com.zj.dp.web.action.LoginAction">
+			<result>/index.jsp</result>
+		</action>
+		<action name="check_reg" method="check" class="com.zj.dp.web.action.RegAction">
+			<result>/index.jsp</result>
+		</action>
+		<action name="reg" method="reg" class="com.zj.dp.web.action.RegAction">
+			<result>/index.jsp</result>
+		</action>
+		<action name="chupiao" method="chupiao" class="com.zj.dp.web.action.PayAction">
+			<result>/chupiao.jsp</result>
+		</action>
+		<action name="pay" method="pay" class="com.zj.dp.web.action.PayAction">
+			<result>/dingdan.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+	</package>
+	<include file="struts-film.xml"></include>
+	<include file="struts-showtime.xml"></include>
+	<include file="struts-seat.xml"></include>
+	<include file="struts-pay.xml"></include>
+	<include file="struts-order.xml"></include>
+</struts>    
